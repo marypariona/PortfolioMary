@@ -32,7 +32,7 @@ body{
 }
 .container{
     width: inherit;
-    min-height: inherit;
+    height: inherit;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1.5rem;
@@ -251,14 +251,14 @@ h4{
 /*****mascara transparente****/
 .transparent-mask{
     width: 100%;
-    min-height: inherit;
+    height: inherit;
     background-color: var(--blue-alpha-color);
 }
 /*******************home************/
 .home{
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-image:url(../IMG/imgPortafolio03.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -270,7 +270,7 @@ h4{
     justify-content: center;
     align-items: center;
     width: inherit;
-    min-height: inherit;
+    height: inherit;
 }
 .text-box{
     color: var(--white-color);
@@ -349,7 +349,6 @@ h4{
     width: 100%;
     position: absolute;
     bottom: 0;
-    left: 0;
 }
 .separator svg{
     max-width: 100%;
