@@ -17,6 +17,8 @@ html{
     scroll-behavior: smooth;
 }
 
+
+
 *,*::after,*::before{
     box-sizing: inherit;
     padding: 0;
@@ -258,7 +260,6 @@ h4{
 .home{
     position: relative;
     width: 100%;
-    height: 100vh;
     background-image:url(../IMG/imgPortafolio03.png);
     background-repeat: no-repeat;
     background-size: cover;
