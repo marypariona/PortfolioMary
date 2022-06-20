@@ -260,6 +260,7 @@ h4{
 .home{
     position: relative;
     width: 100%;
+    min-height: 100vh;
     background-image:url(../IMG/imgPortafolio03.png);
     background-repeat: no-repeat;
     background-size: cover;
