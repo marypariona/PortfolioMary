@@ -462,11 +462,77 @@ h4{
     justify-content: center;
     align-items: center;
     background-color: var(--orange-color);
-    width: 50%;
     height: 100%;
+    width: 0%;
     font-size: 14px;
     border-radius: .35rem .5rem .5rem .35rem;
 }
+.html.animar{
+width: 85%;
+animation: progressHTML 2s ease both;
+}
+.javascript.animar{
+width: 60%;
+animation: progressjava 2s ease both;
+
+}
+.php.animar{
+width: 60%;
+animation: progressphp 2s ease both;
+
+}
+.css.animar{
+width: 70%;
+animation: progresscss 2s ease both;
+
+}
+.wordpress.animar{
+width: 75%;
+animation: progreswordpress 2s ease both;
+
+}
+@keyframes progressHTML {
+    0%{
+        width: 0;
+    }
+    100%{
+        width:85%;
+    }
+}
+@keyframes progressjava {
+    0%{
+        width: 0;
+    }
+    100%{
+        width:60%;
+    }
+}
+@keyframes progressphp {
+    0%{
+        width: 0;
+    }
+    100%{
+        width:60%;
+    }
+}
+@keyframes progresscss {
+    0%{
+        width: 0;
+    }
+    100%{
+        width:70%;
+    }
+}
+@keyframes progreswordpress {
+    0%{
+        width: 0;
+    }
+    100%{
+        width:75%;
+    }
+}
+
+
 
 
 
