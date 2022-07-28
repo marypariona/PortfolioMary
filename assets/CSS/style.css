@@ -4,6 +4,7 @@
     --blue-color02:#151921;
     --white-color:#fff;
     --white-alpha-color:rgba(255,255,255,0.06);
+    --orange-alpha-color:rgb(222, 148, 85,0.8);
     --gray-color:#bebebe;
     --blue-alpha-color:rgba(34,40,54,0.65);
     --font-poppins:'Poppins', 'sans-serif';
@@ -552,9 +553,9 @@ animation: progreswordpress 2s ease both;
 }
 
 /*******experiences*********/
-.experiences{
+.experiences,.contact{
     width: 100%;
-    padding: 7rem 0;
+    padding: 6rem 0;
     background-color: var(--blue-color);
 }
 .experiences .center{
@@ -626,59 +627,167 @@ animation: progreswordpress 2s ease both;
     right: -20px;
     background-color: var(--orange-color);
 }
-/************portfolio*****************/
-.portfolio{
+/************proyectos*****************/
+.projects{
     width: 100%;
-    background-image:url(https://images.unsplash.com/photo-1520583457224-aee11bad5112?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80) ;
+    background-image:url(https://images.pexels.com/photos/129205/pexels-photo-129205.jpeg?auto=compress&cs=tinysrgb&w=600) ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
-.portfolio .transparent-mask{
+.projects .transparent-mask{
     padding: 6rem 0;
 }
-.portfolio .center{
+.projects .center{
     flex-direction: column;
 }
-.portfolio-list{
+.project-list{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1,1fr);
     gap: 2rem;
 }
-.portfolio-list .item{
-    height: 300px;
-    border-radius: .5rem;
+
+.project-image{
+    position: relative;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    background-color: var(--white-color);
+}
+.project-image{
+    display: flex;
+}
+.project-details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(0);
+    background-color:rgba(34,40,54,0.85);
+    transition: transform .5s ease-in ;
+}
+.project-details *{
+    width: 100%;
+    text-align: center;
+}
+.project-details{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.project-image:hover .project-details{
+    transform: scale(1);
+}
+.project-details .project-name{
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.project-details .project-category{
+    font-size: 14px;
+    color: var(--orange-color);
+}
+.project-details .project-links a,.btn-copy-link{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:14px ;
+    padding: .5rem;
+    background-color: var(--orange-color);
+    border-radius: 50%;
+    border: none;
+    color: var(--white-color);
+    cursor: pointer;
+}
+.view-project{
+    display: flex;
+    justify-content: center;
     position: relative;
 }
-.portfolio-list .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    border-radius: .5rem;
-}
-.portfolio-list .item .img-movil{
+.tooltip{
+    width: max-content;
     position: absolute;
-    bottom: 0;
-    right: -1rem;
-    height: 70%;
-    width: auto;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    justify-content: center;
+    bottom: -2.5rem;
+    font-size: 12px;
+    padding: .3rem .5rem;
+    background: var(--blue-color);
+    border-radius: 5px;
 }
-.portfolio-list .item .img-movil img{
+.tooltip::before{
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    transform: rotate(45deg) translateY(-50%);
+    background-color: var(--blue-color);
+}
+.view-project:hover .tooltip{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity  .3s ease-in;
+}
+/***************contact***************/
+.contact .center{
+    flex-direction: column;
+}
+.contact .contact-means{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
 }
-
-
-
-
-
-
-
-
+.contact-means .contact-item{
+    width: 100%;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-radius: 5px;
+    background-color: var(--white-alpha-color);
+}
+.contact-item .contact-item-icon i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    padding: .5rem;
+    border-radius: 50%;
+    background-color: var(--orange-color);
+    color: var(--white-color);
+}
+.contact-item-icon,.contact-item-name{
+    margin-bottom: .5rem;
+}
+.contact-item .contact-item-name{
+    color: var(--orange-color);
+    font-weight: 700;
+}
+.contact-item .contact-item-data{
+    font-size: 14px;
+}
+/**footer**/
+.footer{
+    width: 100%;
+    background-color: var(--blue-color02);
+    padding: 3rem 0;
+}
+.footer .container{
+    text-align: center;
+    font-size: 14px;
+}
 /******************desktop*************/
 @media (min-width:560px){
     .container{
@@ -686,6 +795,12 @@ animation: progreswordpress 2s ease both;
     }
     .about-view-work{
         flex-direction: row;
+    }
+    .project-image img.active ~ .project-details{
+        transform: scale(1);
+    }
+    .contact .contact-means{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 @media (min-width:688px){
@@ -710,7 +825,7 @@ animation: progreswordpress 2s ease both;
     .data-experiences{
         grid-template-columns: repeat(2,1fr);
     }
-    .portfolio-list{
+    .project-list{
         grid-template-columns: repeat(2,1fr);
     }
 
@@ -765,13 +880,16 @@ animation: progreswordpress 2s ease both;
     .social-media-link:hover{
         color: var(--gray-color);
     }
-    .portfolio-list{
+    .contact .contact-means{
         grid-template-columns: repeat(3,1fr);
     }
 }
 @media(min-width:1200px){
     .container{
         max-width: 1200px;
+    }
+    .project-list{
+        grid-template-columns: repeat(3,1fr);
     }
 }
 
