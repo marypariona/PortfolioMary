@@ -594,10 +594,10 @@ animation: progreswordpress 2s ease both;
     padding-right: .35rem;
 }
 .experience-content .company-name{
-    color:var(--gray-color);
     padding-left: .5rem;
     border-left:solid 1px var(--gray-color);
     text-transform: capitalize;
+    opacity: .7;
 }
 .experience-content .description{
     padding: 1rem 0;
@@ -692,7 +692,7 @@ animation: progreswordpress 2s ease both;
     font-size: 14px;
     color: var(--orange-color);
 }
-.project-details .project-links a,.btn-copy-link{
+.project-details .project-links a{
     width: 50px;
     height: 50px;
     display: flex;
@@ -765,8 +765,14 @@ animation: progreswordpress 2s ease both;
     height: 40px;
     padding: .5rem;
     border-radius: 50%;
+    cursor: pointer;
     background-color: var(--orange-color);
     color: var(--white-color);
+    transition: background-color .3s ease, color.3s ease;
+}
+.contact-item-icon i:hover{
+    background-color:var(--blue-color) ;
+    color: var(--orange-color);
 }
 .contact-item-icon,.contact-item-name{
     margin-bottom: .5rem;
@@ -781,12 +787,15 @@ animation: progreswordpress 2s ease both;
 /**footer**/
 .footer{
     width: 100%;
-    background-color: var(--blue-color02);
     padding: 3rem 0;
+    border-top: solid thin var(--white-alpha-color);
+    background-color: var(--blue-color);
 }
 .footer .container{
     text-align: center;
     font-size: 14px;
+    color: var(--white-color);
+    opacity: .5;
 }
 /******************desktop*************/
 @media (min-width:560px){
