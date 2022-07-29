@@ -38,6 +38,9 @@ body{
     padding: 0 1.5rem;
 
 }
+.about,.skills,.experiences,.projects,.contact{
+    scroll-margin-top: 4rem;
+}
 p{
     line-height: 1.6;
 }
@@ -330,6 +333,7 @@ h4{
     font-size: inherit;
     border-radius: 2rem;
     color: var(--white-color);
+    z-index: 988;
 }
 .about-view-work  .btn-about-me{
     background-color: var(--orange-color);
